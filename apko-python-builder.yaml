@@ -21,4 +21,4 @@ accounts:
   users:
     - username: nonroot
       uid: 65532
-  run-as: 0
+  run-as: 65532
