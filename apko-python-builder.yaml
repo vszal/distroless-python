@@ -1,0 +1,24 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+  packages:
+    - alpine-baselayout
+    - python3
+    - python3-dev
+    - py3-pip
+    - gcc
+    - build-base
+    - linux-headers
+
+environment:
+  PATH: /usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin:/bin
+
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 65532
+  users:
+    - username: nonroot
+      uid: 65532
+  run-as: 0

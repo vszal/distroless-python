@@ -1,0 +1,20 @@
+contents:
+  repositories:
+    - https://dl-cdn.alpinelinux.org/alpine/edge/main
+    - https://dl-cdn.alpinelinux.org/alpine/edge/community
+  packages:
+    - alpine-baselayout
+    - python3
+    - py3-gunicorn # remove if you're not using gunicorn
+
+environment:
+  PATH: /home/nonroot/venv/lib/python3.10/site-packages/bin:/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin
+
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 65532
+  users:
+    - username: nonroot
+      uid: 65532
+  run-as: 65532
