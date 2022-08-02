@@ -19,9 +19,9 @@ path/to/your/repo/python-distroless-builder:latest python-builder.tar
 
 `docker image load --input python-builder.tar`
 
-3. Push the image to your public/private repo:
+3. Configure YOUR-REPO and push the image:
 
-`docker push path/to/your/repo/python-distroless-builder:latest`
+`docker push YOUR-REPO/python-distroless-builder:latest`
 
 # Creating the run image
 1. Use the apko image to build and output the python.tar file:
@@ -35,9 +35,13 @@ path/to/your/repo/python-distroless:latest python.tar
 
 `docker image load --input python.tar`
 
-3. Push the image to your public/private repo:
+3. Configure YOUR-REPO and push the image:
 
-`docker push path/to/your/repo/python-distroless:latest`
+`docker push YOUR-REPO/python-distroless:latest`
+
+## Use the produced base images
+
+See the `example/Dockerfile` for example usage in a Dockerfile. This example set is tailored around a python flask application with gunicorn on the runner image. You may need to adjust base image packages in the apko-python*.yaml files for your use case.
 
 ## Feedback
 Please send me any feedback and pull requests.
