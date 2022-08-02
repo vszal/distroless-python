@@ -23,7 +23,7 @@ path/to/your/repo/python-distroless-builder:latest python-builder.tar
 
 `docker push YOUR-REPO/python-distroless-builder:latest`
 
-# Creating the run image
+## Creating the run image
 1. Use the apko image to build and output the python.tar file:
 
 ```
