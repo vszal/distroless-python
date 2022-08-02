@@ -10,10 +10,13 @@ To create these distroless images you will need the [apko tool](https://github.c
 # Creating the builder image
 1. Use the apko image to build and output the python-builder.tar file:
 
-`docker run -v $PWD:/work distroless.dev/apko build apko-python-builder.yaml path/to/your/repo/python-distroless-builder:latest python-builder.tar`
+```docker run -v $PWD:/work distroless.dev/apko build apko-python-builder.yaml \ 
+path/to/your/repo/python-distroless-builder:latest python-builder.tar```
+
 2. Load the builder image from the tar file:
 
 `docker image load --input python-builder.tar`
+
 3. Push the image to your public/private repo:
 
 `docker push path/to/your/repo/python-distroless-builder:latest`
@@ -21,10 +24,13 @@ To create these distroless images you will need the [apko tool](https://github.c
 # Creating the run image
 1. Use the apko image to build and output the python.tar file:
 
-`docker run -v $PWD:/work distroless.dev/apko build apko-python.yaml path/to/your/repo/python-distroless:latest python.tar`
+```docker run -v $PWD:/work distroless.dev/apko build apko-python.yaml \
+path/to/your/repo/python-distroless:latest python.tar```
+
 2. Load the builder image from the tar file:
 
 `docker image load --input python.tar`
+
 3. Push the image to your public/private repo:
 
 `docker push path/to/your/repo/python-distroless:latest`
