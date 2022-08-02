@@ -1,6 +1,6 @@
 ## Example Dockerfile for Python Flask app running in gunicorn
-## Set your builder repo location
-FROM repo/python-distroless-builder:latest as build
+## Set your builder repo location, replacing YOUR-REPO
+FROM YOUR-REPO/python-distroless-builder:latest as build
 
 # create venv
 RUN python -m venv /home/nonroot/venv
@@ -8,8 +8,8 @@ RUN python -m venv /home/nonroot/venv
 COPY requirements.txt .
 RUN /home/nonroot/venv/bin/pip install -r requirements.txt
 
-## Set your run image location
-FROM repo/python-distroless:latest
+## Set your run image location, replacing YOUR-REPO
+FROM YOUR-REPO/python-distroless:latest
 ENV PYTHONUNBUFFERED=1
 
 # nonroot
