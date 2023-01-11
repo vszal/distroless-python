@@ -1,5 +1,5 @@
 # Deprecated
-Chainguard.dev now has it's own [python image|https://github.com/chainguard-images/images/tree/main/images/python]
+Chainguard.dev now has it's own [python image](https://github.com/chainguard-images/images/tree/main/images/python)
 
 # distroless-python
 TLDR: This repo contains sample apko.yaml files for generating [Chainguard's](https://chainguard.dev) [distroless](https://distroless.dev) container base images for building and running containerized python apps.
